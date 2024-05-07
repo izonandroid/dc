@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.izontechnology.dcapp.presentation.facility_code.FacilityPinCodeFragmentVm" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:tint="@color/theme_black"
+            app:layout_constraintBottom_toBottomOf="@+id/icLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/icLogo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/glHorizontalStart"
+            app:srcCompat="@drawable/ic_logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView"
+            style="@style/TextLato10ssp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/enter_facility_code"
+            app:layout_constraintEnd_toStartOf="@+id/glVerticalEnd"
+            app:layout_constraintStart_toStartOf="@+id/glVerticalStart"
+            app:layout_constraintTop_toBottomOf="@id/icLogo" />
+
+<!--        <com.chaos.view.PinView-->
+<!--            android:id="@+id/pinCode"-->
+<!--            style="@style/TextLato10sspBlackBold"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:enabled="true"-->
+<!--            android:focusable="true"-->
+<!--            android:focusableInTouchMode="true"-->
+<!--            android:inputType="number"-->
+<!--            android:itemBackground="@color/color_pin_background"-->
+<!--            android:shadowColor="@color/space_gray"-->
+<!--            android:text="@={vm.facilityCode}"-->
+<!--            android:textColor="@color/black"-->
+<!--            app:cursorColor="@color/black"-->
+<!--            app:itemCount="4"-->
+<!--            app:itemHeight="@dimen/_40sdp"-->
+<!--            app:itemRadius="@dimen/_8sdp"-->
+<!--            app:itemSpacing="@dimen/_8sdp"-->
+<!--            app:itemWidth="@dimen/_40sdp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/textView"-->
+<!--            app:lineColor="@color/transparent"-->
+<!--            app:lineWidth="@dimen/_1sdp"-->
+<!--            app:viewType="rectangle"-->
+<!--            tools:text="123" />-->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/facilityCode"
+            style="@style/TextLato14sspBlackBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/rec_pin"
+            android:focusable="true"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:inputType="textCapCharacters"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@={vm.facilityCode}"
+            android:textCursorDrawable="@color/black"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/glVerticalEnd"
+            app:layout_constraintStart_toStartOf="@+id/glVerticalStart"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            tools:text="@string/app_name" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirmBtn"
+            style="@style/TextLato10sspWhiteBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@drawable/rec_space_gray_cr_8"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:textAllCaps="false"
+            android:textColor="@color/theme_white"
+            app:layout_constraintEnd_toEndOf="@+id/facilityCode"
+            app:layout_constraintStart_toStartOf="@+id/facilityCode"
+            app:layout_constraintTop_toBottomOf="@id/facilityCode" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtDontCode"
+            style="@style/TextLato10ssp"
+            android:layout_width="0dp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/dont_know_pin"
+            app:layout_constraintEnd_toStartOf="@+id/glVerticalEnd"
+            app:layout_constraintStart_toStartOf="@+id/glVerticalStart"
+            app:layout_constraintTop_toBottomOf="@id/confirmBtn" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glVerticalStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/wifi_vertical_start_per" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glVerticalEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/wifi_vertical_end_per" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glHorizontalStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="@dimen/wifi_horizontal_start_per" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glHorizontalEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="@dimen/wifi_horizontal_end_per" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

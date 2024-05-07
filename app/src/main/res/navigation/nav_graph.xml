@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/action_wifi">
+
+    <fragment
+        android:id="@+id/action_wifi"
+        android:name="com.izontechnology.dcapp.presentation.wifi.WifiFragment"
+        android:label="@string/wifi_fragment"
+        tools:layout="@layout/fragment_wifi" />
+
+
+    <fragment
+        android:id="@+id/action_download_application"
+        android:name="com.izontechnology.dcapp.presentation.downloadapp.DownloadApplicationFragment"
+        android:label="@string/download_app"
+        tools:layout="@layout/fragment_download_application" />
+    <fragment
+        android:id="@+id/action_download_ads"
+        android:name="com.izontechnology.dcapp.presentation.download_ads.DownloadAdsFragment"
+        android:label="@string/downloading_ads_content"
+        tools:layout="@layout/fragment_download_application" />
+
+    <fragment
+        android:id="@+id/action_facility_pin_code"
+        android:name="com.izontechnology.dcapp.presentation.facility_code.FacilityPinCodeFragment"
+        android:label="@string/facility_pin_code_fragment"
+        tools:layout="@layout/fragment_facility_pin_code" />
+
+    <fragment
+        android:id="@+id/action_cart_code"
+        android:name="com.izontechnology.dcapp.presentation.cart_code.CartCodeFragment"
+        android:label="@string/cart_code"
+        tools:layout="@layout/fragment_cart_code" />
+
+    <fragment
+        android:id="@+id/action_kiosk"
+        android:name="com.izontechnology.dcapp.presentation.kiosk.KioskFragment"
+        android:label="@string/enable_kiosk"
+        tools:layout="@layout/fragment_kiosk" />
+
+    <fragment
+        android:id="@+id/action_exit_kiosk"
+        android:name="com.izontechnology.dcapp.presentation.exit_kiosk.ExitKioskFragment"
+        android:label="@string/exit_kiosk"
+        tools:layout="@layout/fragment_exit_kiosk" />
+
+    <fragment
+        android:id="@+id/action_version"
+        android:name="com.izontechnology.dcapp.presentation.version.VersionFragment"
+        android:label="@string/enable_kiosk"
+        tools:layout="@layout/fragment_version" />
+
+    <fragment
+        android:id="@+id/action_sim_activation"
+        android:name="com.izontechnology.dcapp.presentation.sim.SimCardActivationFragment"
+        android:label="@string/sim_activiation"
+        tools:layout="@layout/fragment_sim_card_activation" />
+
+
+</navigation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_color">#FFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="red">#A6073D</color>
+    <color name="black">#FF000000</color>
+    <color name="theme_black">#FF000000</color>
+    <color name="theme_white">#FFFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="space_gray"> #333334</color>
+    <color name="light_gray">#EAEAED</color>
+    <color name="gray">#A5A5A8</color>
+    <color name="green">#0A700E</color>
+    <color name="textColor">#FF000000</color>
+    <color name="color_174b71">#174B71</color>
+    <color name="color_174A71">#174A71</color>
+    <color name="color_EDEDED">#EDEDED</color>
+    <color name="color_radio_selected">#181818</color>
+    <color name="color_loading_text">#A4A5A9</color>
+
+    <color name="pdlg_color_white">@color/color_174b71</color>
+
+    <color name="pdlg_title_color">@color/color_174A71</color>
+    <color name="pdlg_color_black">#000000</color>
+    <color name="pdlg_color_blue">@color/color_EDEDED</color>
+    <color name="color_C4C4C4">#C4C4C4</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_pin_background">#F0F0F0</color>
+    <color name="backgroun_dialog">#FFFFFFFF</color>
+    <color name="dark_green">#09703B</color>
+    <color name="light_green">#98CC65</color>
+    <color name="btn_disable">#C6C6C6</color>
+    <color name="btn_active">#71bf33</color>
+
+
+</resources>

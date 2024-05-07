@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.wifi.WifiFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glHorizontalStart"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/glHorizontalEnd"
+        app:layout_constraintEnd_toEndOf="@id/glVerticalEnd"
+        app:layout_constraintStart_toStartOf="@id/glVerticalStart"
+        app:layout_constraintTop_toBottomOf="@+id/icLogo"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUploadLog"
+            style="@style/TextLato10sspWhiteBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/rec_space_gray_cr_8"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/upload_log"
+            android:textAllCaps="false"
+            android:textColor="@color/theme_white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnReset"
+            style="@style/TextLato10sspWhiteBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/rec_space_gray_cr_8"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/reset"
+            android:textAllCaps="false"
+            android:textColor="@color/theme_white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRestart"
+            style="@style/TextLato10sspWhiteBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/rec_space_gray_cr_8"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/restart"
+            android:textAllCaps="false"
+            android:textColor="@color/theme_white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClose"
+            style="@style/TextLato10sspWhiteBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/rec_space_gray_cr_8"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/close"
+            android:textAllCaps="false"
+            android:textColor="@color/theme_white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTime"
+            android:visibility="gone"
+            style="@style/TextLato10sspWhiteBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/rec_space_gray_cr_8"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/update_time"
+            android:textAllCaps="false"
+            android:textColor="@color/theme_white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtWifi"
+                style="@style/TextLato10ssp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/wi_fi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVerticalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/wifi_vertical_start_per" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVerticalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/wifi_vertical_end_per" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHorizontalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/wifi_horizontal_start_per" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHorizontalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/wifi_horizontal_end_per" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="wifi_vertical_start_per" format="float" type="dimen">0.15</item>
+    <item name="wifi_vertical_end_per" format="float" type="dimen">0.86</item>
+    <item name="wifi_horizontal_start_per" format="float" type="dimen">0.10</item>
+    <item name="wifi_horizontal_end_per" format="float" type="dimen">0.90</item>
+</resources>

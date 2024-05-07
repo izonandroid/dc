@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_marginVertical="@dimen/_8sdp"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgWifiSignal"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:src="@drawable/ic_signal_wifi_4_bar_24"
+        android:tint="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtWifiName"
+        style="@style/TextLato10sspBlackBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:maxLines="1"
+        android:layout_marginTop="4dp"
+        android:singleLine="true"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintEnd_toStartOf="@+id/rlBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgWifiSignal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/app_name" />
+<RelativeLayout
+    android:id="@+id/rlBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnConnect"
+        style="@style/TextLato10sspWhiteBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rec_space_gray_cr_32"
+        android:paddingHorizontal="@dimen/_26sdp"
+        tools:visibility="visible"
+        android:paddingVertical="@dimen/_4sdp"
+        android:text="@string/connect"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:textColor="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnCellular"
+        style="@style/TextLato10sspWhiteBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:background="@drawable/rec_space_gray_cr_32"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_6sdp"
+        android:text="@string/use_cellular_network"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_8ssp"
+        android:textColor="@color/textColor"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+</RelativeLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtWifiStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="@string/connected"
+        android:textColor="@color/textColor"
+        android:visibility="gone"
+        style="@style/TextLato8sspBlack"
+        android:textSize="@dimen/_6ssp"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/txtWifiName"
+        app:layout_constraintTop_toBottomOf="@+id/txtWifiName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".presentation.wifi.WifiFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llIcLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/glHorizontalStart">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/glHorizontalStart"
+            app:srcCompat="@drawable/ic_logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_thin"
+            android:gravity="top"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:singleLine="true"
+            android:text="GOLF"
+            android:textColor="@color/light_green"
+            android:textSize="@dimen/_32ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/llIcLogo"
+            app:layout_constraintStart_toEndOf="@+id/llIcLogo"
+            app:layout_constraintTop_toTopOf="@+id/llIcLogo" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtWelcomMsg"
+        style="@style/TextLato10sspBlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:gravity="center"
+        android:text="@string/welcome_to_izon_360_total_course_technology"
+        app:layout_constraintEnd_toEndOf="@id/glVerticalEnd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/glVerticalStart"
+        app:layout_constraintTop_toBottomOf="@+id/llIcLogo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textStatue"
+        style="@style/TextLato8sspBlack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center"
+        android:text="@string/wifi_connection_message"
+        app:layout_constraintEnd_toEndOf="@id/txtWelcomMsg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtWelcomMsg"
+        app:layout_constraintTop_toBottomOf="@+id/txtWelcomMsg" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/llContinueRefresh"
+        app:layout_constraintEnd_toEndOf="@id/glVerticalEnd"
+        app:layout_constraintStart_toStartOf="@id/glVerticalStart"
+        app:layout_constraintTop_toBottomOf="@+id/textStatue"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_height="@dimen/_1sdp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llSimNetwork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/llContinueRefresh"
+                app:layout_constraintEnd_toEndOf="@id/glVerticalEnd"
+                app:layout_constraintStart_toStartOf="@id/glVerticalStart"
+                app:layout_constraintTop_toBottomOf="@+id/textStatue"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTitle"
+                    style="@style/TextLato10ssp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sim_network"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/sim_network" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSimList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/item_wifi" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:layout_height="@dimen/_1sdp"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/llContinueRefresh"
+                app:layout_constraintEnd_toEndOf="@id/glVerticalEnd"
+                app:layout_constraintStart_toStartOf="@id/glVerticalStart"
+                app:layout_constraintTop_toBottomOf="@+id/textStatue"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llScanning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:visibility="gone">
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="true"
+                        app:indicatorColor="@color/dark_green"
+                        app:trackColor="@color/light_green" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llWifiOff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/wifi_is_not_on"
+                            android:textSize="@dimen/_16ssp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnWifiOn"
+                            style="@style/TextLato10sspWhiteBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:background="@drawable/rec_space_gray_cr_8"
+                            android:paddingHorizontal="@dimen/_14sdp"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/turn_on_wifi"
+                            android:textAllCaps="false"
+                            android:textColor="@color/theme_white" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvWifiList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_wifi" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llContinueRefresh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/glHorizontalEnd"
+        app:layout_constraintEnd_toEndOf="@+id/scroll"
+        app:layout_constraintStart_toStartOf="@+id/scroll">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llRefreshList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgRefreshList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:src="@drawable/ic_refresh" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/refresh_list"
+                android:textSize="@dimen/_10ssp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirmButton"
+            style="@style/TextLato10sspWhiteBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/rec_space_gray_cr_8"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/theme_white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVerticalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/wifi_vertical_start_per" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glVerticalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/wifi_vertical_end_per" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHorizontalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/wifi_horizontal_start_per" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHorizontalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/wifi_horizontal_end_per" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAppVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
